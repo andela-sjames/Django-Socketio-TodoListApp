@@ -20,5 +20,10 @@ from todoapp import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.HomeView.as_view(), name='homepage'),
-    # url(r'^todoapp/', include('todoapp.urls')),
+    url(r'^todoapp/', include('todoapp.urls')),
+]
+
+
+urlpatterns += [
+    url("", include('django_socketio.urls')),
 ]

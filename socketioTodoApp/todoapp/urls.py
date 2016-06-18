@@ -1,11 +1,8 @@
-# from django.conf.urls import url
-# from todoapp import views
+from django.conf.urls import url
+from todoapp import views
 
 
-# urlpatterns = [
+urlpatterns = [
 
-#     url(r'^main/$',
-#         views.ListAllView.as_view(),
-#         name='todoview'
-#         ),
-# ]
+    url(r'^listen/$', views.my_todo, name='mytodo')
+]

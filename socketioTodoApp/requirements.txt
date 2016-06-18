@@ -1,2 +1,0 @@
-Django==1.9.7
-django-materialize-css==0.0.1

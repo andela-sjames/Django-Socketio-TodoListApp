@@ -11,6 +11,15 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="{% static 'materialize/bin/materialize.css' %}"  media="screen,projection"/>
 
+    {% load socketio_tags %}
+    {% socketio %}
+
+    <script>
+        var socket = new io.Socket();
+        socket.connect();
+        // etc
+    </script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,6 +30,16 @@
 
   </head>
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Socket TodoList App</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#l">Sass</a></li>
+          <li><a href="#">Components</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <div class="container">
     {% block main %}

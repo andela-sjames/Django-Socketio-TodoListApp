@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+
+    <div class="row">
+        <form class="col s12" action="/todoapp/listen/" method="post">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea" name="todo_name"></textarea>
+              <label for="textarea1">TODO LIST</label>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <div>
+        <li>
+
+        </li>
+    </div>
+
+{% endblock main%}
