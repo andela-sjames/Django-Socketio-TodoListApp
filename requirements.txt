@@ -1,0 +1,9 @@
+anyjson==0.3.3
+Django==1.8.7
+django-materialize-css==0.0.1
+django-socketio==0.3.9
+gevent==0.13.6
+gevent-socketio==0.2.1
+gevent-websocket==0.2.3
+greenlet==0.4.10
+sphinx-me==0.3

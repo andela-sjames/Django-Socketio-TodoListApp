@@ -5,14 +5,23 @@
 
 
     <div class="row">
-        <form class="col s12" action="/todoapp/listen/" method="post">
+        <form class="col s12" action="#" method="#" id="addtodoio">
+        {% csrf_token %}
           <div class="row">
             <div class="input-field col s12">
               <textarea id="textarea1" class="materialize-textarea" name="todo_name"></textarea>
               <label for="textarea1">TODO LIST</label>
             </div>
           </div>
+
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
         </form>
+    </div>
+
+    <div>
+        <ul id="messages"></ul>
     </div>
 
     <div>
@@ -22,3 +31,4 @@
     </div>
 
 {% endblock main%}
+
