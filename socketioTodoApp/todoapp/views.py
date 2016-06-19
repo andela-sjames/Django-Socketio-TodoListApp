@@ -15,7 +15,12 @@ class HomeView(TemplateView):
 
     template_name = 'index.html'
 
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        context['todos'] = Todo.objects.all()
+        return self.render_to_response(context)
 
+# Ajax implemented here first before using socktio below.
 @require_http_methods(["GET", "POST"])
 def my_todo(request):
     if request.method == 'POST':

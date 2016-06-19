@@ -20,15 +20,18 @@
         </form>
     </div>
 
-    <div>
-        <ul id="messages"></ul>
-    </div>
 
-    <div>
-        <li>
+    <ul id="messages"></ul>
 
-        </li>
-    </div>
+    {% if todos %}
+        <div>
+            <ul>
+                {% for todo in todos %}
+                    <li>{{ todo.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
 
 {% endblock main%}
 
