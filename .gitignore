@@ -87,3 +87,10 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#ignore media and staticfiles
+socketioTodoApp/media/
+socketioTodoApp/staticfiles/
+
+
+db.sqlite3
